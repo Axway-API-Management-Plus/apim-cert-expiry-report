@@ -14,7 +14,7 @@ mvn package command creates a jar file named target/apimanager-cert-expiry-check
 $java -jar target/apimanager-cert-expiry-check-1.0.1.jar -u apiadmin -p changeme -s https://10.129.59.81:8075
 ```
 
-The script creates a csv file named output.csv if there are expired certificate on API manger. (To test the functionality change your system timezone to future date )
+The script creates a csv file named output.csv in a current directory if there are expired certificate on API manger. (To test the functionality change your system timezone to future date )
 
 ## Sample output.csv
 
