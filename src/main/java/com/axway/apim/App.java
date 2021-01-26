@@ -67,7 +67,7 @@ public class App implements Callable<Integer> {
                 for (CACert caCert : certs) {
                     logger.info(caCert.getAlias());
                     Calendar calendar = Calendar.getInstance();
-                    calendar.add(Calendar.DATE, (daysBeforeExpires * -1));
+                    calendar.add(Calendar.DATE, daysBeforeExpires);
                     Date currentDate = calendar.getTime();
                     logger.info("Checking expiry Date : {}", currentDate.toString());
                     Date certExpiryDate = new Date();
