@@ -63,7 +63,7 @@
                         <configuration>
 
                             <mainClass>
-                                com.axway.apim.Main
+                                com.axway.apim.App
                             </mainClass>
                         </configuration>
                     </execution>
