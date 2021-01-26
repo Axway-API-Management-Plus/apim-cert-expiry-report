@@ -27,8 +27,11 @@ public class App implements Callable<Integer> {
     @picocli.CommandLine.Option(required = true, names = {"-p", "--password"}, description = "APIManager password")
     private String password;
 
-    @picocli.CommandLine.Option(names = {"-s", "--serverURL"}, description = "API Manager URL")
+    @picocli.CommandLine.Option(required = true, names = {"-s", "--serverURL"}, description = "API Manager URL")
     private String url;
+
+    @picocli.CommandLine.Option(required = true, names = {"-d", "--daysBeforeExpires"}, description = "Days Before Expires")
+    private int daysBeforeExpires;
 
     public static void main(String[] args) {
         int exitCode = new CommandLine(new App()).execute(args);
@@ -40,7 +43,7 @@ public class App implements Callable<Integer> {
         HttpClient httpClient = null;
         APIClient apiClient = new APIClient();
 
-        APIManagerClient apiManagerClient = null;
+        APIManagerClient apiManagerClient;
         BufferedWriter bufferedWriter = null;
         FileWriter fileWriter = null;
         try {
@@ -63,7 +66,10 @@ public class App implements Callable<Integer> {
                 List<CACert> certs = frontendAPI.getCaCerts();
                 for (CACert caCert : certs) {
                     logger.info(caCert.getAlias());
-                    Date currentDate = Calendar.getInstance().getTime();
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.add(Calendar.DATE, (daysBeforeExpires * -1));
+                    Date currentDate = calendar.getTime();
+                    logger.info("Checking expiry Date : {}", currentDate.toString());
                     Date certExpiryDate = new Date();
                     certExpiryDate.setTime(caCert.getNotValidAfter());
                     logger.info("Expiry Date : {}", certExpiryDate.toString());
@@ -77,7 +83,7 @@ public class App implements Callable<Integer> {
                                     "Expired Certificate Alias Name" + "," + "Expired Date");
                             bufferedWriter.write(NEW_LINE);
                         }
-                        StringBuffer stringBuffer = new StringBuffer();
+                        StringBuilder stringBuffer = new StringBuilder();
                         stringBuffer.append(index);
                         stringBuffer.append(",");
                         stringBuffer.append(frontendAPI.getName());
@@ -106,7 +112,7 @@ public class App implements Callable<Integer> {
                 }
             }
         } catch (UnsupportedOperationException e) {
-            logger.error("Error : {}", e);
+            logger.error("Error : ", e);
             return 1;
         } finally {
 
