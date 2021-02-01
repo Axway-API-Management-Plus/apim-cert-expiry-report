@@ -74,17 +74,19 @@ public class App implements Callable<Integer> {
                     certExpiryDate.setTime(caCert.getNotValidAfter());
                     logger.info("Expiry Date : {}", certExpiryDate.toString());
                     if (currentDate.after(certExpiryDate)) {
-                        logger.info("Cert Expired");
+                        logger.error("Cert Expired");
                         if (fileWriter == null) {
                             fileWriter = new FileWriter("output.csv");
                             bufferedWriter = new BufferedWriter(fileWriter);
-                            bufferedWriter.write("Index" + "," + "API Name" + "," + "API Version" + "," + "Developer Org name" +
+                            bufferedWriter.write("Index" + "," + "Id" + "," + "API Name" + "," + "API Version" + "," + "Developer Org name" +
                                     "," + "Developer login name" + "," + "Developer email" + "," + "Expired Certificate DN" + "," +
                                     "Expired Certificate Alias Name" + "," + "Expired Date");
                             bufferedWriter.write(NEW_LINE);
                         }
                         StringBuilder stringBuffer = new StringBuilder();
                         stringBuffer.append(index);
+                        stringBuffer.append(",");
+                        stringBuffer.append(frontendAPI.getId());
                         stringBuffer.append(",");
                         stringBuffer.append(frontendAPI.getName());
                         stringBuffer.append(",");
