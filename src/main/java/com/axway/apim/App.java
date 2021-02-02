@@ -69,12 +69,13 @@ public class App implements Callable<Integer> {
                     Calendar calendar = Calendar.getInstance();
                     calendar.add(Calendar.DATE, daysBeforeExpires);
                     Date currentDate = calendar.getTime();
-                    logger.info("Checking expiry Date : {}", currentDate.toString());
+                    logger.info("Current Date : {}", currentDate.toString());
                     Date certExpiryDate = new Date();
                     certExpiryDate.setTime(caCert.getNotValidAfter());
                     logger.info("Expiry Date : {}", certExpiryDate.toString());
                     if (currentDate.after(certExpiryDate)) {
-                        logger.error("Cert Expired");
+                        logger.error("Cert " + caCert.getSubject() +" Expired");
+                        System.err.println("Cert " + caCert.getSubject() +" Expired");
                         if (fileWriter == null) {
                             fileWriter = new FileWriter("output.csv");
                             bufferedWriter = new BufferedWriter(fileWriter);
