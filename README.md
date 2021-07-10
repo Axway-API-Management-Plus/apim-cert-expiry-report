@@ -31,25 +31,23 @@ Options:
 
 ![output.csv](outputpolicy.png)
 
-```html
+```csv
 Index,Expired Certificate DN,Expired Date,Policy Reference
+1,"CN=LuxTrust Global Root, O=LuxTrust s.a., C=LU",Wed Mar 17 02:51:37 MST 2021,No
 2,"EMAILADDRESS=premium-server@thawte.com, CN=Thawte Premium Server CA, OU=Certification Services Division, O=Thawte Consulting cc, L=Cape Town, ST=Western Cape, C=ZA",Fri Jan 01 16:59:59 MST 2021,No
-16,"CN=Class 2 Primary CA, O=Certplus, C=FR",Sat Jul 06 16:59:59 MST 2019,No
-32,"CN=KEYNECTIS ROOT CA, OU=ROOT, O=KEYNECTIS, C=FR",Mon May 25 17:00:00 MST 2020,No
-64,"CN=Itau Holding CA Ent02,DC=corp,DC=ihf",Fri Jun 18 00:31:49 MST 2021,No
-128,"CN=Itau Holding CA Sub01",Mon Mar 07 10:41:40 MST 2022,No
-256,"CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US",Sun Jun 21 21:00:00 MST 2020,No
-512,"OU=Equifax Secure Certificate Authority, O=Equifax, C=US",Wed Aug 22 09:41:51 MST 2018,No
-1024,"CN=Itau Holding CA Ent01,DC=corp,DC=ihf",Fri Jun 18 01:10:29 MST 2021,No
-2048,"CN=AddTrust Class 1 CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE",Sat May 30 03:38:31 MST 2020,No
-4096,"CN=AddTrust External CA Root, OU=AddTrust External TTP Network, O=AddTrust AB, C=SE",Sat May 30 03:48:38 MST 2020,No
-8192,"CN=GTE CyberTrust Global Root, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US",Mon Aug 13 16:59:00 MST 2018,No
-16384,"CN=Deutsche Telekom Root CA 2, OU=T-TeleSec Trust Center, O=Deutsche Telekom AG, C=DE",Tue Jul 09 16:59:00 MST 2019,No
-32768,"CN=GeoTrust Global CA, O=GeoTrust Inc., C=US",Fri May 20 21:00:00 MST 2022,No
-65536,"CN=UTN-USERFirst-Object, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US",Tue Jul 09 11:40:36 MST 2019,No
-131072,"CN=StartCom Class 2 Primary Intermediate Server CA,OU=Secure Digital Certificate Signing,O=StartCom Ltd.,C=IL",Tue Oct 24 13:57:09 MST 2017,Yes
-262144,"CN=Thawte Timestamping CA, OU=Thawte Certification, O=Thawte, L=Durbanville, ST=Western Cape, C=ZA",Fri Jan 01 16:59:59 MST 2021,No
-
+3,"CN=UTN-USERFirst-Client Authentication and Email, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US",Tue Jul 09 10:36:58 MST 2019,No
+4,"CertGenericoMBI",Tue Jan 22 21:59:59 MST 2019,Yes
+5,"CN=Class 2 Primary CA, O=Certplus, C=FR",Sat Jul 06 16:59:59 MST 2019,No
+6,"CN=KEYNECTIS ROOT CA, OU=ROOT, O=KEYNECTIS, C=FR",Mon May 25 17:00:00 MST 2020,No
+7,"CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US",Sun Jun 21 21:00:00 MST 2020,No
+8,"OU=Equifax Secure Certificate Authority, O=Equifax, C=US",Wed Aug 22 09:41:51 MST 2018,No
+9,"CN=AddTrust Class 1 CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE",Sat May 30 03:38:31 MST 2020,No
+10,"CN=AddTrust External CA Root, OU=AddTrust External TTP Network, O=AddTrust AB, C=SE",Sat May 30 03:48:38 MST 2020,No
+11,"CN=GTE CyberTrust Global Root, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US",Mon Aug 13 16:59:00 MST 2018,No
+12,"CN=Deutsche Telekom Root CA 2, OU=T-TeleSec Trust Center, O=Deutsche Telekom AG, C=DE",Tue Jul 09 16:59:00 MST 2019,No
+13,"CN=GeoTrust Global CA, O=GeoTrust Inc., C=US",Fri May 20 21:00:00 MST 2022,No
+14,"CN=UTN-USERFirst-Object, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US",Tue Jul 09 11:40:36 MST 2019,No
+15,"CN=StartCom Class 2 Primary Intermediate Server CA,OU=Secure Digital Certificate Signing,O=StartCom Ltd.,C=IL",Tue Oct 24 13:57:09 MST 2017,Yes
 ```
 
 
