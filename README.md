@@ -31,7 +31,7 @@ Options:
 
 ![output.csv](outputpolicy.png)
 
-```csv
+```html
 Index,Expired Certificate DN,Expired Date,Policy Reference
 1,"CN=LuxTrust Global Root, O=LuxTrust s.a., C=LU",Wed Mar 17 02:51:37 MST 2021,No
 2,"EMAILADDRESS=premium-server@thawte.com, CN=Thawte Premium Server CA, OU=Certification Services Division, O=Thawte Consulting cc, L=Cape Town, ST=Western Cape, C=ZA",Fri Jan 01 16:59:59 MST 2021,No
