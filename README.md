@@ -1,4 +1,4 @@
-# APIM Policy and API Manager Certficate Expiry Report CLI tooll
+# APIM Policy and API Manager Certficate Expiry Report CLI tool
 ## Policy Certificate Expiry Report
 
 ### Usage
